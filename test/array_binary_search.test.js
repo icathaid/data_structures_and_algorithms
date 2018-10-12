@@ -2,7 +2,7 @@
 
 const binarySearch = require('../array_binary_search.js');
 
-describe('meatball test', () => {
+describe('binary search function test', () => {
 
   it('gets a real easy one to start with', () => {
     let arr = [1];
