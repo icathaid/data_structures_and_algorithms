@@ -1,3 +1,10 @@
+-=-=-=-=-=-=-=-  TO DO -=-=-=-=-=-=-=-
+
+put whiteboard images inline
+
+travis badge
+
+
 # data_structures_and_algorithms
 
 
@@ -17,3 +24,9 @@ Challenge Details
 
 * Big O * 
     I remember reading that the binary search tree algorithm has a big O of log(n), and I think it was mentioned in lecture, but I legitimately have no idea how to calculate that.
+
+
+Testing
+
+- I modularized the function so I could test it with jest; entering 'npm run test' from the console log will run all of them.
+    it says I have 100% of lines covered, but that line 14 is uncovered.  Not sure what to do with that.  
