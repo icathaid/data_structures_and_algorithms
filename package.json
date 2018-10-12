@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint **/*.js",
+    "test": "jest --coverage --verbose"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/icathaid/data_structures_and_algorithms/issues"
   },
-  "homepage": "https://github.com/icathaid/data_structures_and_algorithms#readme"
+  "homepage": "https://github.com/icathaid/data_structures_and_algorithms#readme",
+  "dependencies": {
+    "eslint": "^5.6.1",
+    "jest": "^23.6.0"
+  }
 }
