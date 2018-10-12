@@ -1,9 +1,7 @@
-[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=array_binary_search)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
-
 # data_structures_and_algorithms
 
 ##  Code Challenge 03 - Binary Search Array
-
+[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=array_binary_search)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
 
 Challenge Details
 - Feature Tasks:
