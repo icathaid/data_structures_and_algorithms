@@ -1,8 +1,5 @@
--=-=-=-=-=-=-=-  TO DO -=-=-=-=-=-=-=-
-
-put whiteboard images inline
-
-travis badge
+[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=array_binary_search)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
+I'm pretty lost on this one - all my checks are passing, but I still have a 'build unknown' badge.  I tried restarting the build through travis and nothing.  Any ideas?
 
 
 # data_structures_and_algorithms
@@ -29,3 +26,7 @@ Testing
 
 - I modularized the function so I could test it with jest; entering 'npm run test' from the console log will run all of them.
     it says I have 100% of lines covered, but that line 14 is uncovered.  Not sure what to do with that.  
+
+Whiteboards:
+![alt text](./assets/03-preWhiteboard.jpg "pre-whiteboard")
+![alt text](./assets/03-whiteboard.jpg "whiteboard")
