@@ -1,6 +1,5 @@
 # data_structures_and_algorithms
 
-
 ##  Code Challenge 03 - Binary Search Array
 
 
