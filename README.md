@@ -6,11 +6,12 @@
 
 ## Challenge
   - Write a function, `BinarySearch` with airty of 2, a sorted array and a search key.
-    - Without utilizing any built-in methods, function should return index of the array element matching the search key.
     - Implement testing with at least three assertations
 ## Solution
-![alt text](./assets/03-preWhiteboard.jpg "pre-whiteboard")
+
 ![alt text](./assets/03-whiteboard.jpg "whiteboard")
+![alt text](./assets/03-preWhiteboard.jpg "pre-whiteboard")
+
 I started (over) by deconstructing the algorithm from Wikipedia and building a truth table to better understand how it works, and then built out my whiteboard from there.  
 * Big O * 
     I remember reading that the binary search tree algorithm has a big O of log(n), and I think it was mentioned in lecture, but I legitimately have no idea how to calculate that.
