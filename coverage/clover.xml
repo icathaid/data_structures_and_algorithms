@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1539326255674" clover="3.2.0">
-  <project timestamp="1539326255674" name="All files">
+<coverage generated="1539462127250" clover="3.2.0">
+  <project timestamp="1539462127250" name="All files">
     <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1" elements="19" coveredelements="18" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1">
       <file name="array_binary_search.js" path="/home/james/cf2/data_structures_and_algorithms/array_binary_search.js">
         <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
