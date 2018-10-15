@@ -6,7 +6,6 @@
 
 ## Challenge
   - Write a function, `BinarySearch` with airty of 2, a sorted array and a search key.
-    - Without utilizing any built-in methods, function should return index of the array element matching the search key.
     - Implement testing with at least three assertations
 ## Solution
 
