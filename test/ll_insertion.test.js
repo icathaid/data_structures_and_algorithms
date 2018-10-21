@@ -47,11 +47,6 @@ describe('insertAfter method', () => {
   it('should only insert a new node after the first node', () => {
     const walter = new List;
     walter.append(9).append(8).append(7).append(8);
-    expect(walter.head.value).toEqual(9);
-    expect(walter.head.next.value).toEqual(8);
-    expect(walter.head.next.next.value).toEqual(7);
-    expect(walter.head.next.next.next.value).toEqual(8);
-    expect(walter.head.next.next.next.next).toBeNull();
     walter.insertAfter(8, 0);
     expect(walter.head.value).toEqual(9);
     expect(walter.head.next.value).toEqual(8);
@@ -69,7 +64,33 @@ describe('insertAfter method', () => {
 });
 
 describe('insertBefore method', () => {
-  it('should work', () => {
-    
+  it('should work on a populated list', () => {
+    const batman = new List;
+    batman.append(1).append(2).append(3);
+    batman.insertBefore(2, 7);
+    expect(batman.head.value).toEqual(1);
+    expect(batman.head.next.value).toEqual(7);
+    expect(batman.head.next.next.value).toEqual(2);
+    expect(batman.head.next.next.next.value).toEqual(3);
+    expect(batman.head.next.next.next.next).toBeNull();
+  });
+  it('should work on an empty list', () => {
+    const joker = new List;
+    joker.insertBefore(undefined, 9);
+    expect(joker.head.value).toEqual(9);
+    expect(joker.head.next).toBeNull();
+  });
+  it('should return an exception if no match is found for search key', () => {
+    const twoFace = new List;
+    twoFace.append(1).append(2).append(3);
+    expect(twoFace.insertBefore(7, 8)).toEqual('Exception');
+  });
+  xit('should work on the end of the list', () => {
+    const catwoman = new List;
+    catwoman.append(1).append(2).append(3);
+    catwoman.insertBefore(3, 7);
+    expect(catwoman.head.value).toEqual(1);
+    expect(catwoman.head.next.value).toEqual(2);
+    expect(catwoman.head.next.next.value).toEqual(7);
   });
 });
