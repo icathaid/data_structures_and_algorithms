@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=ll_insertions)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
+
 # Linked List Insertions
 
 Lab Parter:
