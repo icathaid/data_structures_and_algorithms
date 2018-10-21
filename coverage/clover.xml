@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1539462127250" clover="3.2.0">
-  <project timestamp="1539462127250" name="All files">
-    <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1" elements="19" coveredelements="18" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1">
+<coverage generated="1540151565623" clover="3.2.0">
+  <project timestamp="1540151565624" name="All files">
+    <metrics statements="57" coveredstatements="52" conditionals="18" coveredconditionals="16" methods="7" coveredmethods="6" elements="82" coveredelements="74" complexity="0" loc="57" ncloc="57" packages="1" files="3" classes="3">
       <file name="array_binary_search.js" path="/home/james/cf2/data_structures_and_algorithms/array_binary_search.js">
         <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
@@ -16,6 +16,57 @@
         <line num="14" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="15" count="2" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="ll_insertion.js" path="/home/james/cf2/data_structures_and_algorithms/ll_insertion.js">
+        <metrics statements="42" coveredstatements="37" conditionals="12" coveredconditionals="11" methods="5" coveredmethods="4"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="12" count="23" type="stmt"/>
+        <line num="13" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="17" count="15" type="stmt"/>
+        <line num="19" count="15" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
+        <line num="22" count="15" type="stmt"/>
+        <line num="23" count="15" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="51" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+      </file>
+      <file name="node.js" path="/home/james/cf2/data_structures_and_algorithms/node.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="30" type="stmt"/>
+        <line num="4" count="30" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
       </file>
     </metrics>
   </project>

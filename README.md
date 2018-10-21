@@ -1,28 +1,36 @@
-[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=array_binary_search)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
+[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=ll_insertions)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
 
-# Binary Search
-  Code Challenge 03 - implement binary search tree on sorted array
+# Linked List Insertions
+
+Lab Parter:
+    Edward Mark Puzino
+
+[![whiteboard image](./assets/06-whiteboard.jpg)](whiteboard.jpg)
 
 
 ## Challenge
-  - Write a function, `BinarySearch` with airty of 2, a sorted array and a search key.
-    - Implement testing with at least three assertations
+
+Write the following methods on a Linked List class:
+
+    * .append(value)
+        - adds a new node with the given value to the end of the list
+    * .insertBefore(value, newValue)
+        - adds a new node with the given value before the first node whose value matches the newValue
+    * .insertAfter(value, newValue)
+        - adds a new node with the given value after the first node whose value matches the newValue
+
 ## Solution
 
-![alt text](./assets/03-whiteboard.jpg "whiteboard")
-![alt text](./assets/03-preWhiteboard.jpg "pre-whiteboard")
+All three functions rely on a while loop to traverse the linked list- append traverses all the way to the end, while insertBefore and insertAfter traverse until the first node whose value matches the newValue given to it.
 
-I started (over) by deconstructing the algorithm from Wikipedia and building a truth table to better understand how it works, and then built out my whiteboard from there.  
-* Big O * 
-    I remember reading that the binary search tree algorithm has a big O of log(n), and I think it was mentioned in lecture, but I legitimately have no idea how to calculate that.
+All three functions create a new node with the Node constructor and a value given to it as an input.
 
+append() inserts the new node at the end of the list.
 
-## Testing
+insertBefore() inserts the new node before the first node matching its search key by caching the rest of the linked list, setting the current node to the value of the new node, and then setting the next of the current node to the cache.
 
-- I modularized the function so I could test it with jest; entering 'npm run test' from the console log will run all of them.
-    it says I have 100% of lines covered, but that line 14 is uncovered.  Not sure what to do with that.  
+insertAfter() does exactly the same thing but manually traverses one node further before insertion.
 
-## Resources
+## Notes
 
-[Wikipedia BST algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-    I ordinarily wouldn't have looked up the algorithm, but it's listed as a resource, so I used it.  My lab partner and I tried to get to a solution without it and got pretty stuck.  It turns out we were really close.  We hadn't declared the L and R variables, and couldn't figure out the logic involved in determining the left and right margins to search within, especially in cases where both margins move as the search progresses.  It involved a lot of expressions nested within bracket notation, and would have made unreadable code even if it worked.
+The only part I couldn't get working was the case where insertBefore() is called on the last element of the list - there's something wonky with how I'm traversing it and I think it just traverses off the end of the list and never executes the code that inserts the new node.  I put in a bunch of logic statements to try to catch that case but nothing worked and I'm way over the amount of time I should have put into this already.  I had 3 other tests for that function so I skipped the one for that edge case so I can move on.
