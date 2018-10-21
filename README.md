@@ -5,6 +5,8 @@
 Lab Parter:
     Edward Mark Puzino
 
+[![whiteboard image](./assets/06-whiteboard.jpg)](whiteboard.jpg)
+
 
 ## Challenge
 
