@@ -54,8 +54,8 @@ describe('pop function', () => {
   it('should return the deleted node', () => {
     let bunny = new Stack;
     bunny.push(1).push(2).push(3);
-    let karlHungus = bunny.top;
-    expect(bunny.pop()).toEqual(karlHungus);
+    expect(bunny.top.value).toEqual(3);
+    bunny.pop();
     expect(bunny.top.value).toEqual(2);
   });
   it('should return a (mocked) error if called on an empty list', () => {
@@ -64,8 +64,8 @@ describe('pop function', () => {
   });
 });
 
-describe('peek module', () => {
-  it('should return the top node on the stack when called without argument', () => {
+describe('peek function', () => {
+  it('should return the top node on the stack', () => {
     let nihilist1 = new Stack;
     nihilist1.push(1).push(2).push(3);
     let nihilist2 = nihilist1.peek();
@@ -84,7 +84,6 @@ describe('constructor function', () => {
   it('should return an empty queue if called with no arguments', () => {
     let han = new Queue;
     expect(han).toBeDefined();
-    console.log('han:                 ', han);
     expect(han.head).toBeNull();
     expect(han.next).toBeNull();
   });
@@ -107,24 +106,44 @@ describe('enqueue function', () => {
     expect(leia.head.next.value).toEqual(2);
     expect(leia.head.next.next.value).toEqual(1);
   });
-  it('should correctly track the front of the queue', () => {
-    let chewie = new Queue;
-    chewie.enqueue(3);
-    expect(chewie.front.value).toEqual(3);
-    chewie.enqueue(2);
-    expect(chewie.front.value).toEqual(2);
-    chewie.enqueue(1);
-    expect(chewie.front.value).toEqual(1);
-  });
 });
 
 describe('dequeue function', () => {
   it('remove the front node from the queue', () => {
     let lando = new Queue;
     lando.enqueue(1).enqueue(2).enqueue(3);
-    expect(lando.front.value).toEqual(3);
+    expect(lando.head.next.value).toEqual(2);
+    expect(lando.head.next.next.value).toEqual(1);
     lando.dequeue();
-    expect(lando.front.value).toEqual(2);
+    expect(lando.head.next.value).toEqual(2);
+    expect(lando.head.next.next).toBeNull();
   });
-  
+  it('should return the deleted node', () => {
+    let obiWan = new Queue;
+    obiWan.enqueue(1).enqueue(2).enqueue(3);
+    expect(obiWan.head.value).toEqual(3);
+    expect(obiWan.head.next.value).toEqual(2);
+    expect(obiWan.head.next.next.value).toEqual(1);
+    obiWan.dequeue();
+    expect(obiWan.head.value).toEqual(3);
+    expect(obiWan.head.next.value).toEqual(2);
+    expect(obiWan.head.next.next).toBeNull();
+  });
+  it('should return a (mocked) error if called on an empty list', () => {
+    let porkins = new Queue;
+    expect(porkins.dequeue()).toEqual('you called dequeue on an empty list');
+  });
+});
+
+describe('peek function', () => {
+  it('should return the front node of the queue', () => {
+    let r2d2 = new Queue;
+    r2d2.enqueue(1).enqueue(2).enqueue(3);
+    let c3po = r2d2.peek();
+    expect(c3po.value).toEqual(1);
+    r2d2.dequeue();
+    r2d2.enqueue(4).enqueue(5);
+    c3po = r2d2.peek();
+    expect(c3po.value).toEqual(2);
+  });
 });

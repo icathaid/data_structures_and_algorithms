@@ -61,24 +61,45 @@ class Queue {
   constructor(){
     this.head = null;
     this.next = null;
-    this.front = null;
+    // this.front = null;
   }
   enqueue(val){
     let holdThis = this.head;
     let node = new Node(val);
     this.head = node;
     this.head.next = holdThis;
-    this.front = node;
+    // this.front = node;
     return this;
   }
   dequeue(){
+    if(!this.head){
+      console.log('you called dequeue on an empty list');
+      return 'you called dequeue on an empty list';
+    }
     let current = this.head;
     while(current.next.next){
       current = current.next;
+      // this.front = current;
     }
+    let holder = current.next;
     current.next = null;
-    console.log('current:     ', current);
+    console.log('holder:    ', holder);
+    return holder;
+  }
+  peek(){
+    // return this.front;
+    let current = this.head;
+    while(current.next){
+      current = current.next;
+    }
+    return current;
   }
 }
 
 module.exports = { Stack, Queue };
+
+let bill = new Queue;
+bill.enqueue(1).enqueue(2).enqueue(3);
+console.log(bill.peek());
+bill.dequeue();
+console.log(bill.peek());
