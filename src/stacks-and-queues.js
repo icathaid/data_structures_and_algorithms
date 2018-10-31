@@ -11,7 +11,7 @@ class Stack {
     this.head = null;
     this.top = null;
   }
-  addToTop(val){
+  push(val){
     if(!this.head){
       this.head = new Node(val);
       this.top = new Node(val);
@@ -27,10 +27,37 @@ class Stack {
       return this;
     }
   }
+  pop(){
+    //  add error checking for being called on empty list
+    let current = this.head;
+    while(current.next.next){
+      current = current.next;
+    }
+    let deletedNode = current.next;
+    current.next = null;
+    console.log('deleted node', deletedNode);
+    console.log('FIX ME       ', bill.top);
+    this.top = current;
+    console.log('FIXED ME       ', bill.top);
+    return deletedNode;
+  }
 }
 
 const bill = new Stack;
-console.log('empty bill:    ', bill);
-bill.addToTop(6).addToTop(7);
-console.log('full bill:     ', bill);
-console.log('bill.top:    ', bill.top);
+
+bill.push(1).push(2).push(3).push(4);
+
+console.log('-=-=-=-=-PRE POP BILL-=-=-=-=-');
+console.log(bill.head);
+console.log(bill.head.next);
+console.log(bill.head.next.next);
+console.log(bill.head.next.next.next);
+
+bill.pop();
+
+console.log('-=-=-=-=-POST POP BILL-=-=-=-=-');
+console.log(bill.head);
+console.log(bill.head.next);
+console.log(bill.head.next.next);
+console.log(bill.head.next.next.next);
+console.log('post pop bill.top:     ', bill.top);
