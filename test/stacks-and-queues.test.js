@@ -1,6 +1,8 @@
 'use strict';
+//  these tests are almost identical, how can I make the method dynamic?  
 
-const Stack = require('../src/stacks-and-queues.js');
+//  STACK TESTING
+const { Stack, Queue} = require('../src/stacks-and-queues.js');
 
 describe('constructor function', () => {
   it('should return an empty stack if called with no arguments', () => {
@@ -54,6 +56,7 @@ describe('pop function', () => {
     bunny.push(1).push(2).push(3);
     let karlHungus = bunny.top;
     expect(bunny.pop()).toEqual(karlHungus);
+    expect(bunny.top.value).toEqual(2);
   });
   it('should return a (mocked) error if called on an empty list', () => {
     let smokey = new Stack;
@@ -70,5 +73,47 @@ describe('peek module', () => {
     nihilist1.push(4).push(5);
     nihilist2 = nihilist1.peek();
     expect(nihilist2.value).toEqual(5);
+  });
+});
+
+//  QUEUE TESTING
+
+// const Queue = require('../src/stacks-and-queues.js');
+
+describe('constructor function', () => {
+  it('should return an empty queue if called with no arguments', () => {
+    let han = new Queue;
+    expect(han).toBeDefined();
+    console.log('han:                 ', han);
+    expect(han.head).toBeNull();
+    expect(han.next).toBeNull();
+  });
+});
+
+describe('enqueue function', () => {
+  it('should add add a new node with the value given to the top of the queue', () => {
+    let luke = new Queue;
+    console.log(luke);
+    expect(luke.head).toBeNull();
+    luke.enqueue(1);
+    expect(luke.head).toBeDefined();
+    expect(luke.head.value).toEqual(1);
+    expect(luke.head.next).toBeNull();
+  });
+  it('should add multiple new nodes to the queue in the correct order', () => {
+    let leia = new Queue;
+    leia.enqueue(1).enqueue(2).enqueue(3);
+    expect(leia.head.value).toEqual(3);
+    expect(leia.head.next.value).toEqual(2);
+    expect(leia.head.next.next.value).toEqual(1);
+  });
+  it('should correctly track the top of the queue', () => {
+    let chewie = new Queue;
+    chewie.enqueue(3);
+    expect(chewie.front.value).toEqual(3);
+    chewie.enqueue(2);
+    expect(chewie.front.value).toEqual(2);
+    chewie.enqueue(1);
+    expect(chewie.front.value).toEqual(1);
   });
 });

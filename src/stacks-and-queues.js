@@ -9,6 +9,7 @@ const Node = require('./node.js');
 class Stack {
   constructor(){
     this.head = null;
+    this.next = null;
     this.top = null;
   }
   push(val){
@@ -28,9 +29,8 @@ class Stack {
     }
   }
   pop(){
-    //  add error checking for being called on empty list
     if(!this.head){
-      return console.log('you called pop on an empty list');
+      return 'you called pop on an empty list';
     }
     let current = this.head;
     while(current.next.next){
@@ -46,30 +46,39 @@ class Stack {
   }
 }
 
-// const bill = new Stack;
 
-// bill.push(1).push(2).push(3).push(4);
+//  QUEUE = FIFO
 
-// console.log('-=-=-=-=-PRE POP BILL-=-=-=-=-');
-// console.log(bill.head);
-// console.log(bill.head.next);
-// console.log(bill.head.next.next);
-// console.log(bill.head.next.next.next);
+//  enqueue should add to the BACK of the queue, which will be the FRONT of the linked list because reasons
+//  dequeue should remove from the FRONT of the queue, which will be the BACK of the linked list
 
-// bill.pop();
+//  no
+//  enqueue should add to the FRONT of the queue, which will be the BACK of the linked list, because i have to return the deleted node and i don't want the whole list wrapped up in the .next
+//  dequeue should remove from the BACK of the queue, which will be the FRONT of the linked list.
+//  this is 'backwards' but will (should) still add/remove data in a FIFO format
 
-// console.log('-=-=-=-=-POST POP BILL-=-=-=-=-');
-// console.log(bill.head);
-// console.log(bill.head.next);
-// console.log(bill.head.next.next);
-// console.log(bill.head.next.next.next);
-// console.log('post pop bill.top:     ', bill.top);
+class Queue {
+  constructor(){
+    this.head = null;
+    this.next = null;
+    this.front = null;
+  }
+  enqueue(val){
+    let holdThis = this.head;
+    let node = new Node(val);
+    this.head = node;
+    this.head.next = holdThis;
+    this.front = node;
+    return this;
+  }
+  dequeue(){
+    let current = this.head;
+    while(current.next.next){
+      current = current.next;
+    }
+    current.next = null;
+    console.log('current:     ', current);
+  }
+}
 
-// const ted = new Stack;
-
-// ted.push(9).push(8).push(7);
-// console.log('ted.top:    ', ted.top);
-// console.log('ted.peek', ted.peek());
-
-// const rufus = new Stack;
-// console.log('rufus', rufus.peek());
+module.exports = { Stack, Queue };
