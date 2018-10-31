@@ -1,6 +1,6 @@
 'use strict';
 
-const List = require('../ll_insertion.js');
+const List = require('../src/ll_insertion.js');
 
 describe('append method', () => {
 
