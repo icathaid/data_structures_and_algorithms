@@ -107,7 +107,7 @@ describe('enqueue function', () => {
     expect(leia.head.next.value).toEqual(2);
     expect(leia.head.next.next.value).toEqual(1);
   });
-  it('should correctly track the top of the queue', () => {
+  it('should correctly track the front of the queue', () => {
     let chewie = new Queue;
     chewie.enqueue(3);
     expect(chewie.front.value).toEqual(3);
@@ -116,4 +116,15 @@ describe('enqueue function', () => {
     chewie.enqueue(1);
     expect(chewie.front.value).toEqual(1);
   });
+});
+
+describe('dequeue function', () => {
+  it('remove the front node from the queue', () => {
+    let lando = new Queue;
+    lando.enqueue(1).enqueue(2).enqueue(3);
+    expect(lando.front.value).toEqual(3);
+    lando.dequeue();
+    expect(lando.front.value).toEqual(2);
+  });
+  
 });
