@@ -78,12 +78,11 @@ describe('peek function', () => {
 
 //  QUEUE TESTING
 
-// const Queue = require('../src/stacks-and-queues.js');
-
 describe('constructor function', () => {
   it('should return an empty queue if called with no arguments', () => {
     let han = new Queue;
     expect(han).toBeDefined();
+    expect(han.front).toBeNull();
     expect(han.head).toBeNull();
     expect(han.next).toBeNull();
   });
@@ -106,17 +105,23 @@ describe('enqueue function', () => {
     expect(leia.head.next.value).toEqual(2);
     expect(leia.head.next.next.value).toEqual(1);
   });
+  it('should correctly track the front of the queue', () => {
+    let jarjar = new Queue;
+    expect(jarjar.front).toBeNull();
+    jarjar.enqueue(1);
+    expect(jarjar.front.value).toEqual(1);
+    jarjar.enqueue(2);
+    expect(jarjar.front.value).toEqual(1);
+  });
 });
 
 describe('dequeue function', () => {
   it('remove the front node from the queue', () => {
     let lando = new Queue;
     lando.enqueue(1).enqueue(2).enqueue(3);
-    expect(lando.head.next.value).toEqual(2);
-    expect(lando.head.next.next.value).toEqual(1);
+    expect(lando.front.value).toEqual(1);
     lando.dequeue();
-    expect(lando.head.next.value).toEqual(2);
-    expect(lando.head.next.next).toBeNull();
+    expect(lando.front.value).toEqual(2);
   });
   it('should return the deleted node', () => {
     let obiWan = new Queue;
@@ -132,6 +137,14 @@ describe('dequeue function', () => {
   it('should return a (mocked) error if called on an empty list', () => {
     let porkins = new Queue;
     expect(porkins.dequeue()).toEqual('you called dequeue on an empty list');
+  });
+  it('should correctly track the front of the queue', () => {
+    let kylo = new Queue;
+    expect(kylo.front).toBeNull();
+    kylo.enqueue(1).enqueue(2).enqueue(3);
+    expect(kylo.front.value).toEqual(1);
+    kylo.dequeue();
+    expect(kylo.front.value).toEqual(2);
   });
 });
 
