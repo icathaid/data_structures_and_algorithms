@@ -1,7 +1,7 @@
 {
-  "name": "data_structures_and_algorithms",
+  "name": "stacks-and-queues",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=ll_kth_from_the_end)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms) # Linked List Insertions",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/icathaid/data_structures_and_algorithms.git"
   },
-  "author": "",
+  "author": "James McDaniel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/icathaid/data_structures_and_algorithms/issues"
@@ -23,6 +23,8 @@
   "homepage": "https://github.com/icathaid/data_structures_and_algorithms#readme",
   "dependencies": {
     "eslint": "^5.6.1",
+    "express": "^4.16.4",
     "jest": "^23.6.0"
-  }
+  },
+  "devDependencies": {}
 }
