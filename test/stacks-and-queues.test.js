@@ -2,7 +2,7 @@
 //  these tests are almost identical, how can I make the method dynamic?  
 
 //  STACK TESTING
-const { Stack, Queue} = require('../src/stacks-and-queues.js');
+const { Stack, Queue } = require('../src/stacks-and-queues.js');
 
 describe('constructor function', () => {
   it('should return an empty stack if called with no arguments', () => {
