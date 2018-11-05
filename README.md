@@ -2,7 +2,6 @@ TRAVIS BADGE GOES HERE
 
 
 ##  Lab 10 - Stacks and Queues
-
   Lab 10 - Data Structures and Algorithms - Stacks and Queues
   Codefellows 401n7
   James McDaniel
@@ -33,4 +32,3 @@ TRAVIS BADGE GOES HERE
     - `enqueue` takes a value and places it at the front of the queue
     - `dequeue` removes the front of the queue and returns the node
     - `peek` returns the node located at the front of the stack
-
