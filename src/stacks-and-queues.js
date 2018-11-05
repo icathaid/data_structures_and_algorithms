@@ -46,17 +46,6 @@ class Stack {
   }
 }
 
-
-//  QUEUE = FIFO
-
-//  enqueue should add to the BACK of the queue, which will be the FRONT of the linked list because reasons
-//  dequeue should remove from the FRONT of the queue, which will be the BACK of the linked list
-
-//  no
-//  enqueue should add to the FRONT of the queue, which will be the BACK of the linked list, because i have to return the deleted node and i don't want the whole list wrapped up in the .next
-//  dequeue should remove from the BACK of the queue, which will be the FRONT of the linked list.
-//  this is 'backwards' but will (should) still add/remove data in a FIFO format
-
 class Queue {
   constructor(){
     this.head = null;

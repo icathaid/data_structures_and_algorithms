@@ -1,10 +1,34 @@
+TRAVIS BADGE GOES HERE
 
-[![whiteboard image](./assets/02-whiteboard.jpg)](whiteboard.jpg)
 
-## Challenge
+##  Lab 10 - Stacks and Queues
+  Lab 10 - Data Structures and Algorithms - Stacks and Queues
+  Codefellows 401n7
+  James McDaniel
 
-Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
-​
-## Solution
+##  Challenge - 
 
-I divided the length of the array by two to find the midpoint, and then made two loops to iterate through each half.  The first loop adds each value to a newly declared array, and when finished running, the input value is added to the next index position.  The second loop picks up where the first one left off, iterating through the second half of the input array and adding each value to the return array.
+  Create a Stack and Queue class to implement First In First Out stacks and First In Last Out queues, both utilizing linked lists.
+
+##  Approach and efficiency - 
+
+  Both classes begin with a node constructor.  The push and enqueue functions are essentially the same, as are the pop/dequeue functions, they just do things in a different order.
+
+  `push/enqueue` - Stacks iterate through the entire list, if there is one, and add a new value to the end.  Queues add a new value to the beginning, and then iterate through the rest of the list, shuffling each value through a swap variable, and re-assigning it to the queue one position further down.
+
+  `pop/dequeue` - Both functions iterate through the entire list, setting the last node to null and returning a copy of it.  Because the push/enqueue functions read the lists in oppoisite orders, this preserves the nature of the FIFO/FILO structures.
+
+
+##  API
+
+- Stack Properties and Methods:
+  - should create a `top` value to track the top of the stack
+  - `push` takes a value and adds it to the top of the stack
+  - `pop` removes node from top of stack and returns the node
+  - `peek` returns the node at the top of the stack
+
+  - Queue Methods and Properties:
+    - should create a `front` value to track the front of the queue
+    - `enqueue` takes a value and places it at the front of the queue
+    - `dequeue` removes the front of the queue and returns the node
+    - `peek` returns the node located at the front of the stack
