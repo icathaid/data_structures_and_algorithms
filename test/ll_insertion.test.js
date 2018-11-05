@@ -85,7 +85,7 @@ describe('insertBefore method', () => {
     twoFace.append(1).append(2).append(3);
     expect(twoFace.insertBefore(7, 8)).toEqual('Exception');
   });
-  xit('should work on the end of the list', () => {
+  it('should work on the end of the list', () => {
     const catwoman = new List;
     catwoman.append(1).append(2).append(3);
     catwoman.insertBefore(3, 7);

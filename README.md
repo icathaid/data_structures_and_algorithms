@@ -1,18 +1,36 @@
-[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=ll_kth_from_the_end)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
-# Linked List Insertions
+TRAVIS BADGE GOES HERE
 
-Lab Parter:
-    Edward Mark Puzino
 
-[![whiteboard image](./assets/07-whiteboard.jpg)](whiteboard.jpg)
+##  Lab 10 - Stacks and Queues
 
-## Challenge
+  Lab 10 - Data Structures and Algorithms - Stacks and Queues
+  Codefellows 401n7
+  James McDaniel
 
-Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+##  Challenge - 
 
-​
-## Solution
+  Create a Stack and Queue class to implement First In First Out stacks and First In Last Out queues, both utilizing linked lists.
 
-In order to determine the length of the linked list, we first iterated through it using a while loop, adding 1 to a global counter variable during each iteration.
+##  Approach and efficiency - 
 
-We then subtracted the input variable, k, from the counter, and iterated through the list again that many times using a for loop, returning the value found at that node.  
+  Both classes begin with a node constructor.  The push and enqueue functions are essentially the same, as are the pop/dequeue functions, they just do things in a different order.
+
+  `push/enqueue` - Stacks iterate through the entire list, if there is one, and add a new value to the end.  Queues add a new value to the beginning, and then iterate through the rest of the list, shuffling each value through a swap variable, and re-assigning it to the queue one position further down.
+
+  `pop/dequeue` - Both functions iterate through the entire list, setting the last node to null and returning a copy of it.  Because the push/enqueue functions read the lists in oppoisite orders, this preserves the nature of the FIFO/FILO structures.
+
+
+##  API
+
+- Stack Properties and Methods:
+  - should create a `top` value to track the top of the stack
+  - `push` takes a value and adds it to the top of the stack
+  - `pop` removes node from top of stack and returns the node
+  - `peek` returns the node at the top of the stack
+
+  - Queue Methods and Properties:
+    - should create a `front` value to track the front of the queue
+    - `enqueue` takes a value and places it at the front of the queue
+    - `dequeue` removes the front of the queue and returns the node
+    - `peek` returns the node located at the front of the stack
+
