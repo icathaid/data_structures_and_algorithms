@@ -1,18 +1,10 @@
-[![Build Status](https://www.travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=ll_kth_from_the_end)](https://www.travis-ci.com/icathaid/data_structures_and_algorithms)
-# Linked List Insertions
 
-Lab Parter:
-    Edward Mark Puzino
-
-[![whiteboard image](./assets/07-whiteboard.jpg)](whiteboard.jpg)
+[![whiteboard image](./assets/02-whiteboard.jpg)](whiteboard.jpg)
 
 ## Challenge
 
-Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
-
+Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
 ​
 ## Solution
 
-In order to determine the length of the linked list, we first iterated through it using a while loop, adding 1 to a global counter variable during each iteration.
-
-We then subtracted the input variable, k, from the counter, and iterated through the list again that many times using a for loop, returning the value found at that node.  
+I divided the length of the array by two to find the midpoint, and then made two loops to iterate through each half.  The first loop adds each value to a newly declared array, and when finished running, the input value is added to the next index position.  The second loop picks up where the first one left off, iterating through the second half of the input array and adding each value to the return array.
