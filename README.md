@@ -1,4 +1,4 @@
-TRAVIS BADGE GOES HERE
+[![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=stack_and_queue)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
 
 
 ##  Lab 10 - Stacks and Queues
