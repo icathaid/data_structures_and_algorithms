@@ -1,4 +1,4 @@
-TRAVIS BADGE GOES HERE
+[![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=stack_and_queue)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
 
 
 ##  Lab 10 - Stacks and Queues
@@ -32,3 +32,9 @@ TRAVIS BADGE GOES HERE
     - `enqueue` takes a value and places it at the front of the queue
     - `dequeue` removes the front of the queue and returns the node
     - `peek` returns the node located at the front of the stack
+
+
+
+###  Notes:
+
+I had to hardcode the path to the test into package.json to prevent travis from failing on other labs that I haven't finished testing for yet.
