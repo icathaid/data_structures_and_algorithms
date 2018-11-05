@@ -3,13 +3,12 @@
 function insertShiftArray(arr, val){
   let newArr = [];
   let mp = Math.floor(arr.length/2);
-  arr.length +=1;
-  newArr.length = arr.length;
+  newArr.length = arr.length + 1;
   for(let i = 0; i < mp; i++){
     newArr[i] = arr[i];
   }
   newArr[mp] = val;
-  for(let i = mp + 1; i < arr.length; i++){
+  for(let i = mp + 1; i < arr.length + 1; i++){
     newArr[i] = arr[i - 1];
   }
   return newArr;
