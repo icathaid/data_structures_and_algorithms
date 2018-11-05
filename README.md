@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=stack_and_queue)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
 
 
-
 ##  Lab 10 - Stacks and Queues
   Lab 10 - Data Structures and Algorithms - Stacks and Queues
   Codefellows 401n7
