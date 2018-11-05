@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "eslint **/*.js",
-    "test": "jest --coverage --verbose"
+    "test": "jest /test/stacks-and-queues.test.js --coverage --verbose"
   },
   "repository": {
     "type": "git",
