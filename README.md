@@ -1,40 +1,21 @@
-[![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=stack_and_queue)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
+#  Code Challenge 11 - Implement a Queue Using Two Stacks
 
+##  Challenge
 
-##  Lab 10 - Stacks and Queues
-  Lab 10 - Data Structures and Algorithms - Stacks and Queues
-  Codefellows 401n7
-  James McDaniel
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement the standard queue interface, but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
 
-##  Challenge - 
+`enqueue(value)` - inserts value into the PseudoQueue, using a first-in, first-out approach.
+`dequeue()`  - extracts a value from the PseudoQueue, using a first-in, first-out approach.
+  The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
 
-  Create a Stack and Queue class to implement First In First Out stacks and First In Last Out queues, both utilizing linked lists.
+##  Approach and Effieciency
 
-##  Approach and efficiency - 
+  I tried to simply push everything onto one stack, then onto another, reversing its order, and return the second stack.  
 
-  Both classes begin with a node constructor.  The push and enqueue functions are essentially the same, as are the pop/dequeue functions, they just do things in a different order.
+##  Solution
 
-  `push/enqueue` - Stacks iterate through the entire list, if there is one, and add a new value to the end.  Queues add a new value to the beginning, and then iterate through the rest of the list, shuffling each value through a swap variable, and re-assigning it to the queue one position further down.
-
-  `pop/dequeue` - Both functions iterate through the entire list, setting the last node to null and returning a copy of it.  Because the push/enqueue functions read the lists in oppoisite orders, this preserves the nature of the FIFO/FILO structures.
-
-
-##  API
-
-- Stack Properties and Methods:
-  - should create a `top` value to track the top of the stack
-  - `push` takes a value and adds it to the top of the stack
-  - `pop` removes node from top of stack and returns the node
-  - `peek` returns the node at the top of the stack
-
-  - Queue Methods and Properties:
-    - should create a `front` value to track the front of the queue
-    - `enqueue` takes a value and places it at the front of the queue
-    - `dequeue` removes the front of the queue and returns the node
-    - `peek` returns the node located at the front of the stack
+  When I tried to code it out, nothing worked.  at all.  
 
 
 
-###  Notes:
-
-I had to hardcode the path to the test into package.json to prevent travis from failing on other labs that I haven't finished testing for yet.
+[![whiteboard image](./assets/11-whiteboard.jpg)](whiteboard.jpg)

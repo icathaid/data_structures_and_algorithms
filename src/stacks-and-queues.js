@@ -84,12 +84,12 @@ class Queue {
 module.exports = { Stack, Queue };
 
 
-let larry = new Queue;
-larry.enqueue(1).enqueue(2).enqueue(3);
-console.log('FRONT:       ', larry.front);
-larry.enqueue(4);
-console.log('FRONT:       ', larry.front);
-larry.dequeue();
-console.log('FRONT:       ', larry.front);
+// let larry = new Queue;
+// larry.enqueue(1).enqueue(2).enqueue(3);
+// console.log('FRONT:       ', larry.front);
+// larry.enqueue(4);
+// console.log('FRONT:       ', larry.front);
+// larry.dequeue();
+// console.log('FRONT:       ', larry.front);
 
-console.log('peek', larry.peek());
+// console.log('peek', larry.peek());
