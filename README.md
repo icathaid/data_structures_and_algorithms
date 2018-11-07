@@ -13,3 +13,5 @@
 ##  Solution
 
 The approach I whiteboarded, for once, worked on the first almost exactly how I first wrote it out.  (I did change the final logic checks slightly to make the code more readable/writeable, but functionally it works the same both ways.)
+
+![13-whiteboard.jpg](./assets/13-whiteboard.jpg)
