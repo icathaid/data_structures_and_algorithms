@@ -1,40 +1,15 @@
-[![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=stack_and_queue)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
+# Multi-Bracket-Validation
 
+##  Challenge
 
-##  Lab 10 - Stacks and Queues
-  Lab 10 - Data Structures and Algorithms - Stacks and Queues
-  Codefellows 401n7
-  James McDaniel
+  Write a function which takes a single argument, a string, and returns a boolean indicating whether the number of left-handed brackets (`({[`) is balanced by the appropriate number of right-handed brackets(`)}]`).
 
-##  Challenge - 
+##  Approach and Efficiency
 
-  Create a Stack and Queue class to implement First In First Out stacks and First In Last Out queues, both utilizing linked lists.
+  I went for the simple solution, and created a 'scoreboard' of variables to keep track of the number of left and right-handed braces of each type.  I split the input string into an array, and iterated over the array, checking each position for braces, and tallying the count on the scoreboard.  After iteration, it performs 3 additional checks to determine if any type of brace has uneven representation, and returns true if none are found.  
 
-##  Approach and efficiency - 
+  I feel like there is a simpler solution either working directly on the string, or consolidating some of the character checks into some sort of 'typeOf' check, but I couldn't figure it out, so I went with what I was pretty sure would work.
 
-  Both classes begin with a node constructor.  The push and enqueue functions are essentially the same, as are the pop/dequeue functions, they just do things in a different order.
+##  Solution
 
-  `push/enqueue` - Stacks iterate through the entire list, if there is one, and add a new value to the end.  Queues add a new value to the beginning, and then iterate through the rest of the list, shuffling each value through a swap variable, and re-assigning it to the queue one position further down.
-
-  `pop/dequeue` - Both functions iterate through the entire list, setting the last node to null and returning a copy of it.  Because the push/enqueue functions read the lists in oppoisite orders, this preserves the nature of the FIFO/FILO structures.
-
-
-##  API
-
-- Stack Properties and Methods:
-  - should create a `top` value to track the top of the stack
-  - `push` takes a value and adds it to the top of the stack
-  - `pop` removes node from top of stack and returns the node
-  - `peek` returns the node at the top of the stack
-
-  - Queue Methods and Properties:
-    - should create a `front` value to track the front of the queue
-    - `enqueue` takes a value and places it at the front of the queue
-    - `dequeue` removes the front of the queue and returns the node
-    - `peek` returns the node located at the front of the stack
-
-
-
-###  Notes:
-
-I had to hardcode the path to the test into package.json to prevent travis from failing on other labs that I haven't finished testing for yet.
+The approach I whiteboarded, for once, worked on the first almost exactly how I first wrote it out.  (I did change the final logic checks slightly to make the code more readable/writeable, but functionally it works the same both ways.)

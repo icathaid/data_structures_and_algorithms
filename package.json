@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "eslint \"**/*.js\"",
-    "test": "jest /test/stacks-and-queues.test.js --coverage --verbose"
+    "test": "jest /test/multi-bracket-validation.js --coverage --verbose"
   },
   "repository": {
     "type": "git",
