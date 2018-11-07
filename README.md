@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=multi-bracket-validation)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
+
 # Multi-Bracket-Validation
 
 ##  Challenge
