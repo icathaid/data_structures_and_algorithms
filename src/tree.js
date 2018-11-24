@@ -16,6 +16,7 @@ class Tree {
   constructor(root = null) {
     this.root = root;
   }
+
   insert(value) {
     const node = this.root;
     if (node === null) {
@@ -47,6 +48,23 @@ class Tree {
     };
     _insert(node);
   }
+
+  search(value){
+    let current = this.root;
+    while (current.value !== value){
+      if(value < current.value){
+        current = current.left;
+      }
+      else {
+        current = current.right;
+      }
+      if(current === null){
+        return null;
+      }
+    }
+    return current;
+  }
+
 
   // Root - Left - Right
   preOrder() {
@@ -107,6 +125,15 @@ class Tree {
   }
 }
 
+
+
+
+
+
+
+
+
+
 module.exports = Tree;
 
 let tree = new Tree();
@@ -115,7 +142,10 @@ let values = [9, 4, 17, 3, 6, 22, 5, 7, 20];
 values.map(val => tree.insert(val));
 
 
-console.log('Pre-Order:  ', tree.preOrder());
-console.log('Post-Order:   ', tree.postOrder());
-console.log('In-Order:   ', tree.inOrder());
-console.log('Level-Order:   ', tree.levelOrder());
+// console.log('Pre-Order:  ', tree.preOrder());
+// console.log('Post-Order:   ', tree.postOrder());
+// console.log('In-Order:   ', tree.inOrder());
+// console.log('Level-Order:   ', tree.levelOrder());
+
+console.log('searching for 22');
+console.log(tree.search(22));
