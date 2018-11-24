@@ -1,16 +1,6 @@
 'use strict';
 
-// const Node = require('./node.js');
-
-
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-
+const Node = require('./node.js');
 
 class Tree {
   constructor(root = null) {
@@ -50,6 +40,7 @@ class Tree {
   }
 
   search(value){
+    if(!this.root){ return null; }
     let current = this.root;
     while (current.value !== value){
       if(value < current.value){
@@ -125,27 +116,5 @@ class Tree {
   }
 }
 
-
-
-
-
-
-
-
-
-
 module.exports = Tree;
 
-let tree = new Tree();
-
-let values = [9, 4, 17, 3, 6, 22, 5, 7, 20];
-values.map(val => tree.insert(val));
-
-
-// console.log('Pre-Order:  ', tree.preOrder());
-// console.log('Post-Order:   ', tree.postOrder());
-// console.log('In-Order:   ', tree.inOrder());
-// console.log('Level-Order:   ', tree.levelOrder());
-
-console.log('searching for 22');
-console.log(tree.search(22));
