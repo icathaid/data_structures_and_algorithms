@@ -116,5 +116,6 @@ class Tree {
   }
 }
 
+console.log('stfu gh');
 module.exports = Tree;
 
