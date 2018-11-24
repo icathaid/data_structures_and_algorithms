@@ -1,40 +1,46 @@
-[![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=stack_and_queue)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
+[![Build Status](https://travis-ci.com/icathaid/data_structures_and_algorithms.svg?branch=tree)](https://travis-ci.com/icathaid/data_structures_and_algorithms)
+# Trees
 
+Implement a Binary Search Tree
 
-##  Lab 10 - Stacks and Queues
-  Lab 10 - Data Structures and Algorithms - Stacks and Queues
-  Codefellows 401n7
-  James McDaniel
+##  Challenge
 
-##  Challenge - 
+Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 
-  Create a Stack and Queue class to implement First In First Out stacks and First In Last Out queues, both utilizing linked lists.
+Create a Binary Tree class with the following traversal methods:
+  - preOrder
+  - postOrder
+  - levelOrder
+  * each method must take in a root node and return an array of values.
 
-##  Approach and efficiency - 
+Create a Binary Search tree class with the following methods:
+  - add
+    - takes in a value and inserts a new node with that value at the correct location in the BST
+  - search
+    - takes in a value and returns the node matching that value if one exists
+      - returns null if no node is found
 
-  Both classes begin with a node constructor.  The push and enqueue functions are essentially the same, as are the pop/dequeue functions, they just do things in a different order.
+##  Approach and Efficiency
 
-  `push/enqueue` - Stacks iterate through the entire list, if there is one, and add a new value to the end.  Queues add a new value to the beginning, and then iterate through the rest of the list, shuffling each value through a swap variable, and re-assigning it to the queue one position further down.
+I accidentally incorporated both into one class, but all functions work.  
 
-  `pop/dequeue` - Both functions iterate through the entire list, setting the last node to null and returning a copy of it.  Because the push/enqueue functions read the lists in oppoisite orders, this preserves the nature of the FIFO/FILO structures.
+  All three of the traversal methods operate by creating a results array, and then defining a function (which will be immediately invoked with this.root as an argument) that recursively pushes the value of each current node to the results array, then moves one position further down the tree.  They only differ in order of the steps.
+
+  The add method operates by checking if the value of the inserted node is greater or less than the value of the current node, then recursively traverses through the tree until it reaches the end of the appropriate branch
+
+  The search method employs a while loop to traverse through the binary search tree until a node is found matching the search key, or will return null if no match is found.
 
 
 ##  API
 
-- Stack Properties and Methods:
-  - should create a `top` value to track the top of the stack
-  - `push` takes a value and adds it to the top of the stack
-  - `pop` removes node from top of stack and returns the node
-  - `peek` returns the node at the top of the stack
+Methods available:
 
-  - Queue Methods and Properties:
-    - should create a `front` value to track the front of the queue
-    - `enqueue` takes a value and places it at the front of the queue
-    - `dequeue` removes the front of the queue and returns the node
-    - `peek` returns the node located at the front of the stack
+preOrder()  - pre order traversal
+postOrder() - post order traversal
+levelOrder()  - breadth first traversal
 
+add()
+  - takes a single argument, a value, and inserts a new node with that value at the correct position on the tree.
 
-
-###  Notes:
-
-I had to hardcode the path to the test into package.json to prevent travis from failing on other labs that I haven't finished testing for yet.
+search()
+  - takes a single argument, a value, and returns the node matching that value if one exists, or null if one does not.

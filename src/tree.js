@@ -7,7 +7,7 @@ class Tree {
     this.root = root;
   }
 
-  insert(value) {
+  add(value) {
     const node = this.root;
     if (node === null) {
       this.root = new Node(value);
