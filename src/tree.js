@@ -116,6 +116,17 @@ class Tree {
   }
 }
 
-console.log('stfu gh');
+
 module.exports = Tree;
+
+let bill = new Tree();
+bill.add(2);
+bill.add(7);
+bill.add(5);
+bill.add(2);
+bill.add(6);
+bill.add(9);
+bill.add(5);
+bill.add(11);
+bill.add(4);
 
